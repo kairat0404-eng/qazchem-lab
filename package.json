@@ -1,0 +1,31 @@
+{
+  "name": "qazchem-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QAZCHEM LAB — қазақ тіліндегі интерактивті виртуалды химия зертханасы",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "build:single": "node scripts/build-single.mjs",
+    "test": "tsx --test src/tests/*.test.ts",
+    "e2e": "node scripts/build-single.mjs && node scripts/e2e.cjs dist-single/qazchem-lab.html e2e-shots",
+    "gen:elements": "python3 scripts/gen_elements.py src/data/elements.ts"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.9.1",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react": "5.0.4",
+    "esbuild": "0.25.11",
+    "playwright": "1.56.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vite": "7.1.11"
+  }
+}
